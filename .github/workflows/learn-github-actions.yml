@@ -1,16 +1,25 @@
-name: Node.js Package
-on: [push]
+name: Build and test Globfs  
+on: [push]  
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v2
+   build:
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+         node-version: [12.x]
+      steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
-          registry-url: 'https://npmjs.org'
-      - run: npm install
-      - run: npm publish
+          node-version: ${{ matrix.node-version }}
+      - name: npm install and npm test
+        run: |
+          npm run setup-test
+          npm run test
+      - name: npm publish
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm run trypublish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          CI: true
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
