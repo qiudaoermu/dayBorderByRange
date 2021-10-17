@@ -6,7 +6,8 @@
   "scripts": {
     "test": "",
     "setup": "npm install && cd .. && npm install",
-    "build": "lerna run build --stream --sort"
+    "build": "lerna run build --stream --sort",
+    "trypublish": "npm publish || true"
   },
   "repository": {
     "type": "git",
