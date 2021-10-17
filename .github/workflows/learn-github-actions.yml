@@ -18,7 +18,6 @@ jobs:
           npm run test
       - name: npm publish
         run: |
-          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
           npm run trypublish
         env:
           CI: true
