@@ -1,22 +1,39 @@
 {
-  "name": "dayborderbyrange",
+  "name": "dayjs-recur",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Day.js plugin for matching and generating recurring dates.",
+  "main": "index.min.js",
+  "module": "index.min.js",
+  "license": "MIT",
+  "author": "Fraser Hamilton",
   "scripts": {
-    "test": "",
-    "setup": "npm install && cd .. && npm install",
-    "build": "lerna run build --stream --sort",
-    "trypublish": "npm publish || true"
+    "build": "rollup --config",
+    "minify": "terser build/index.js --compress --mangle --output index.min.js",
+    "build:minify": "yarn build && yarn minify",
+    "test": "jest --watch"
   },
+  "keywords": [
+    "day.js",
+    "dayjs",
+    "date",
+    "recur",
+    "match"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qiudaoermu/dayBorderByRange.git"
+    "url": "https://github.com/FraserHamilton/dayjs-recur.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/qiudaoermu/dayBorderByRange/issues"
-  },
-  "homepage": "https://github.com/qiudaoermu/dayBorderByRange#readme"
+  "files": [
+    "index.min.js"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-jest": "^26.1.0",
+    "dayjs": "^1.8.33",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "rollup": "^2.18.0",
+    "terser": "^4.8.0"
+  }
 }

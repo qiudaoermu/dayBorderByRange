@@ -1,9 +1,12 @@
 /**
  * 根据 年份 和 季度  月度的 第一天 和 季度 最后 一天
- * @param year
- * @param quarter
+ * @param {timeStamp} string
+ * @param type {string} [month, quartor, year]
+ * @return {string} 2020-10-01 - 2020-10-31
  */
-
+export default (option, dayjsClass, dayjsFactory) => {
+  dayjsClass.getTimeBorder = getTimeBorder
+}
 const getQuartorStartDate = (d) => {
   const month = d.getMonth();
   const year = d.getFullYear();
