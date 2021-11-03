@@ -9,9 +9,7 @@ dayjs().getTimeBorder($time, type)
 ### 参数
 
 <$time>
-timestamp
-
-时间戳 
+timestamp 时间戳 
 
 < type >
 month | quarter | year

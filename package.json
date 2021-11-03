@@ -1,6 +1,6 @@
 {
   "name": "dayjs-range",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A Day.js plugin for matching and generating recurring dates.",
   "main": "index.min.js",
   "module": "index.min.js",
