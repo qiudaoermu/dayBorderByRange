@@ -2,13 +2,15 @@
 
 ### 根据提供的时间，得出当前时间 月 季 年 第一天至最后一天
 
-### usage
+## usage
 
 dayjs().getTimeBorder($time, type)
 
 ### 参数
 
 <$time>
+timestamp
+
 时间戳 
 
 < type >
