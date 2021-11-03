@@ -1,5 +1,5 @@
 {
-  "name": "dayjs-recur",
+  "name": "dayjs-range",
   "version": "1.0.0",
   "description": "A Day.js plugin for matching and generating recurring dates.",
   "main": "index.min.js",
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/FraserHamilton/dayjs-recur.git"
+    "url": "https://github.com/qiudaoermu/dayjs-range.git"
   },
   "files": [
     "index.min.js"

@@ -5,7 +5,7 @@
  * @return {string} 2020-10-01 - 2020-10-31
  */
 export default (option, dayjsClass, dayjsFactory) => {
-  dayjsClass.getTimeBorder = getTimeBorder
+  dayjsFactory.getTimeBorder = getTimeBorder
 }
 const getQuartorStartDate = (d) => {
   const month = d.getMonth();
@@ -25,7 +25,7 @@ const getQuartorStartDate = (d) => {
     }
   });
   const startDate =
-    d.getFullYear() + "-" + formatDate(startMonth) + d.getDate();
+    d.getFullYear() + "-" + formatDate(startMonth) + '-' + '0' + d.getDate();
   const endDate =
     d.getFullYear() +
     "-" +
@@ -38,13 +38,6 @@ const getQuartorStartDate = (d) => {
   };
 };
 
-// 格式化月和日为MM、dd
-const formatDate = (value) => {
-  if (value < 10) {
-    value = "0" + value;
-  }
-  return value;
-};
 
 const getMonthStartDate = (d) => {
   let startMon;
@@ -60,11 +53,13 @@ const getMonthStartDate = (d) => {
 };
 
 const getYearStartDate = (d) => {
+  const year = d.getFullYear();
   let startMon = "01";
-  let endMon = "12";
-  var lastDay = new Date(d.getTime() - 1000 * 60 * 60 * 24).getDate(); // 获取当月最后一天日期
+  let endMonth = "12";
   let startDate = d.getFullYear() + "-" + startMon + "-" + "0" + d.getDate();
-  let endDate = d.getFullYear() + "-" + endMon + "-" + lastDay;
+  let endDate = d.getFullYear() + 
+      "-" + endMonth + 
+      "-" + new Date(year, endMonth, 0).getDate();;
   return {
     startDate,
     endDate,
@@ -86,4 +81,11 @@ const getTimeBorder = (timeStamp = "", type) => {
   if (type === "quartor") {
     return getQuartorStartDate(d);
   }
+};
+// 格式化月和日为MM、dd
+const formatDate = (value) => {
+  if (value < 10) {
+    value = "0" + value;
+  }
+  return value;
 };
