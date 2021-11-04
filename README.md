@@ -6,7 +6,7 @@
 
 dayjs().getTimeBorder(timestamp, type)
 
-## 参数
+### 参数
 
 <timestamp>
 timestamp 时间戳 
