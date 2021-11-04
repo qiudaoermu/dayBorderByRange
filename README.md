@@ -1,6 +1,6 @@
 ### compute first day and last day by provided date
 
-### 根据提供的时间，得出当前时间 月 季 年 第一天至最后一天
+### 根据提供的时间，得出当前时间的月，季,年的第一天至最后一天。
 
 ## usage
 
