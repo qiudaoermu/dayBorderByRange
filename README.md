@@ -23,7 +23,7 @@ console.log(time.startDate) // 2021-11-01
 
 console.log(time.endDate)   //  2021-11-30
 
-#### quarter 季度
+##### quarter 季度
 
 let time = dayjs.getTimeBorder(1635952894007, 'quarter')
 
