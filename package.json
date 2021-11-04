@@ -1,11 +1,11 @@
 {
   "name": "dayjs-range",
   "version": "1.0.3",
-  "description": "A Day.js plugin for matching and generating recurring dates.",
+  "description": "A Day.js plugin for matching and generating range dates.",
   "main": "index.min.js",
   "module": "index.min.js",
   "license": "MIT",
-  "author": "Fraser Hamilton",
+  "author": "qiudaoermu",
   "scripts": {
     "build": "rollup --config",
     "minify": "terser build/index.js --compress --mangle --output index.min.js",
@@ -16,7 +16,7 @@
     "day.js",
     "dayjs",
     "date",
-    "recur",
+    "dayRange",
     "match"
   ],
   "repository": {
