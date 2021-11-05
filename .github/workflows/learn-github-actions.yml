@@ -14,4 +14,3 @@ jobs:
       - run: npx semantic-release@17
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          GH_TOKEN: ${{secrets.GH_TOKEN}}
