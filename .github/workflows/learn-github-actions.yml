@@ -13,5 +13,5 @@ jobs:
         uses: bahmutov/npm-install@v1
       - run: npx semantic-release@17
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GH_TOKEN: ${{secrets.GH_TOKEN}}
