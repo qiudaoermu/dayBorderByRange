@@ -10,6 +10,7 @@
     "build": "rollup --config",
     "minify": "terser build/index.js --compress --mangle --output index.min.js",
     "build:minify": "yarn build && yarn minify",
+    "prepare": "npm run build && npm --no-git-tag-version version patch",
     "test": "jest --watch"
   },
   "keywords": [
