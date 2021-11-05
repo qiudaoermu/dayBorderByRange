@@ -12,14 +12,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+          registry-url: 'https://npm.pkg.github.com'
       - name: npm install and npm test
         run: |
           npm install
           npm run test
       # Publish to npm
-      - name: npm login
-        run: |
-          npm login
       - name: npm publish 
         run: |
           npm publish --access public
