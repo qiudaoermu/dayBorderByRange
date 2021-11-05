@@ -13,4 +13,5 @@ jobs:
         uses: bahmutov/npm-install@v1
       - run: npx semantic-release@17
         env:
+          CI: true
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
