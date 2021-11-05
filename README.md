@@ -8,7 +8,7 @@ dayjs().getTimeBorder(timestamp, type)
 
 ## 参数
 
-<timestamp>
+< timestamp >
 timestamp 时间戳 
 
 < type >
