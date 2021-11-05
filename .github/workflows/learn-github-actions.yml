@@ -17,6 +17,9 @@ jobs:
           npm install
           npm run test
       # Publish to npm
+      - name: npm login
+        run: |
+          npm login
       - name: npm publish 
         run: |
           npm publish --access public
