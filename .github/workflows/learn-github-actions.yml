@@ -1,5 +1,7 @@
-name: "Publish Module to NPM"
-    needs: test
+name: "Publish Module to NPM" 
+on: [push]  
+jobs:
+   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
