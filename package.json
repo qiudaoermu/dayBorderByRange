@@ -10,8 +10,7 @@
     "build": "rollup --config",
     "minify": "terser build/index.js --compress --mangle --output index.min.js",
     "build:minify": "yarn build && yarn minify",
-    "test": "jest",
-    "prepare": "npm --no-git-tag-version version patch"
+    "test": "jest"
   },
   "keywords": [
     "day.js",
