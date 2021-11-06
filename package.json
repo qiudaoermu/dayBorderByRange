@@ -1,6 +1,6 @@
 {
   "name": "dayjs-range",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Day.js plugin for matching and generating range dates.",
   "main": "index.min.js",
   "module": "index.min.js",
