@@ -1,8 +1,9 @@
-import { NodePath } from "@babel/traverse"
+
 
 ### compute first day and last day of type(month,quarter,year) by provided data
 
 ### 根据提供的时间，得出当前时间的月，季,年的第一天至最后一天。
+
 
 ## install
 npm i dayjs-range
